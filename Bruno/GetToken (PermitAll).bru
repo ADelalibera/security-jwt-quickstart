@@ -1,0 +1,15 @@
+meta {
+  name: GetToken (PermitAll)
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8080/secured/get-Token
+  body: none
+  auth: none
+}
+
+vars:post-response {
+  accessToken: res.body.accessToken
+}
